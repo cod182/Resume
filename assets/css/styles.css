@@ -6,9 +6,21 @@
     border:0;
 }
 
+/* --Colours-- */
+.bg-color-name-title {
+    background-color: #676767;
+}
+/*--/ Colours */
+
+
+/* --Heading-- */
 header {
     margin:0;
 
+}
+
+.heading {
+    margin-left: 50px;
 }
 
 .logo {
@@ -23,6 +35,22 @@ header {
 
 }
 
-body {
-
+.name {
+    font-family: "exo", "sans-serif";
+    font-weight: 100;
+    font-size: 46px;
+    margin-top: 50px;
+    color: #fff;
 }
+
+.title {
+    font-family: "roboto", "sans-serif";
+    font-weight: 200;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    color: #fff;
+}
+
+
+/* --/Heading-- */
