@@ -58,61 +58,45 @@
 
     <section class="container-fluid">
         <div class="row">
-            <div class="col-md-4 bg-color-personal-info section-column">
+            <div class="col-md-4 bg-color-meetups-history section-column">
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="section-heading uppercase">Personal Info</h3>
+                        <h3 class="section-heading uppercase">Confrences and Meetups Attended</h3>
                     </div>
                 </div>
-                <div class="personal-info-item">
-                    <div class="key uppercase">
-                        <p>Name:</p>
-                    </div>
-                    <div class="value">
-                        <p>Codie Stephens-Evans</p>
-                    </div>
-                </div>
+                <div id="map"></div>
+                
 
-                <div class="personal-info-item">
-                    <div class="key uppercase">
-                        <p>Address:</p>
-                    </div>
-                    <div class="value">
-                        <p>Cardiff, </p>
-                    </div>
-                </div>
-
-                <div class="personal-info-item">
-                    <div class="key uppercase">
-                        <p>Phone:</p>
-                    </div>
-                    <div class="value">
-                        <p>+44 7777 77777</p>
-                    </div>
-                </div>
-
-                <div class="personal-info-item">
-                    <div class="key uppercase">
-                        <p>Email:</p>
-                    </div>
-                    <div class="value">
-                        <p>codie@me.com</p>
-                    </div>
-                </div>
             </div>
             <div class="col-md-8 bg-color-three-reasons section-column">
                 <div class="row">
                     <div class="col">
-                        <h3 class="section-heading uppercase">About Me</h3>
+                        <h3 class="section-heading uppercase">My Groups and Societies</h3>
                     </div>
+                </div>
                 <div class="row">
                     <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
                         <div class="row">
                             <div class="col-2">
-                                <i class="fa fa-question three-reasons-icon" aria-hidden="true"></i>
+                                <i class="fa fa-group three-reasons-icon" aria-hidden="true"></i>
                             </div>
                             <div class="col-10">
-                                <h4 class="three-reasons-heading uppercase">What do I do?</h4>
+                                <h4 class="three-reasons-heading uppercase">Coding Range</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolores eius sunt autem nihil laboriosam inventore tempore eos cum consequuntur, rem ea consectetur optio quis. Eligendi adipisci quos expedita eius?</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                
+
+                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="fa fa-group three-reasons-icon" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-10">
+                                <h4 class="three-reasons-heading uppercase">Django</h4>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolores eius sunt autem nihil laboriosam inventore tempore eos cum consequuntur, rem ea consectetur optio quis. Eligendi adipisci quos expedita eius?</p>
                             </div>
                         </div>
@@ -121,10 +105,10 @@
                     <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
                         <div class="row">
                             <div class="col-2">
-                                <i class="fa fa-thumbs-up three-reasons-icon" aria-hidden="true"></i>
+                                <i class="fa fa-group three-reasons-icon" aria-hidden="true"></i>
                             </div>
                             <div class="col-10">
-                                <h4 class="three-reasons-heading uppercase">How do I do it?</h4>
+                                <h4 class="three-reasons-heading uppercase">Full Stack NY</h4>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolores eius sunt autem nihil laboriosam inventore tempore eos cum consequuntur, rem ea consectetur optio quis. Eligendi adipisci quos expedita eius?</p>
                             </div>
                         </div>
@@ -133,17 +117,17 @@
                     <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
                         <div class="row">
                             <div class="col-2">
-                                <i class="fa fa-bolt three-reasons-icon" aria-hidden="true"></i>
+                                <i class="fa fa-group three-reasons-icon" aria-hidden="true"></i>
                             </div>
                             <div class="col-10">
-                                <h4 class="three-reasons-heading uppercase">Why hire me?</h4>
+                                <h4 class="three-reasons-heading uppercase">IOT NATION</h4>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolores eius sunt autem nihil laboriosam inventore tempore eos cum consequuntur, rem ea consectetur optio quis. Eligendi adipisci quos expedita eius?</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 </div>
-            </div>
 
         </div>
     </section>
@@ -217,6 +201,8 @@
         </div>
 
     </footer>
-
+<script src="assets/js/maps.js"></script>
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDHHyac2SiOYPNYxXMK7rqJjnB8nCaaxE&callback=initMap"></script>
 </body>
 </html>
