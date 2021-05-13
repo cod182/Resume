@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codie Stephens-Evans</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
+    <script src="https://kit.fontawesome.com/5351067769.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/github-information.js" type="text/javascript"></script>
+
+
+</head>
+<body>
+    
+    <header>
+        <div class="row no-gutters">
+            <a class="col-md-4 logo"></a>
+
+            <div class="col-md-8">
+                <div class="row bg-color-name-title no-gutters" >
+                    <div class="col heading">
+                        <h1 class="name">Codie Stephens-Evans</h1>
+                        <h2 class="title">Full Stack Developer</h2>
+                    </div>
+                </div>
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <ul id="nav" class="list-inline menu-container">
+                                <li class="col-6 col-sm-2 list-inline-item ui-menu-color-home menu-item">
+                                    <a href="#" class="hvr-sweep-to-bottom"><span><i class="fa fa-home" aria-hidden="true"></i>Home</span></a>
+                                </li>
+
+                                <li class="col-6 col-sm-2 list-inline-item ui-menu-color-resume menu-item">
+                                    <a href="resume.html" class="hvr-sweep-to-bottom"><span><i class="fa fa-graduation-cap" aria-hidden="true"></i>Resume</span></a>
+                                </li>
+
+                                <li class="col-6 col-sm-2 list-inline-item ui-menu-color-contact menu-item">
+                                    <a href="contact.html"class="hvr-sweep-to-bottom"><span><i class="fa fa-comment-o" aria-hidden="true"></i>Contact</span></a>
+                                </li>
+
+                                <li class="col-6 col-sm-2 list-inline-item ui-menu-color-interests menu-item">
+                                    <a href="interests.html"class="hvr-sweep-to-bottom"><span><i class="fa fa-comment-o" aria-hidden="true"></i>Interests</span></a>
+                                </li>
+
+                                <li class="col-6 col-sm-2 list-inline-item ui-menu-color-github menu-item">
+                                    <a href="github.html"class="hvr-sweep-to-bottom"><span><i class="fa fa-comment-o" aria-hidden="true"></i>GitHub</span></a>
+                                </li>
+
+                                <li class="col-6 col-sm-2 list-inline-item ui-menu-color-download menu-item">
+                                    <a href="assets/CV/sample-cv.pdf"class="hvr-sweep-to-bottom" target="_blank"><span><i class="fa fa-download" aria-hidden="true"></i>Download</span></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container-fluid">
+        <div class="row bg-color-contact">
+            <div class="col">
+                <h3 class="contact-heading uppercase text-center ">View My GitHub Projects</h3>
+                <h5 class=" uppercase text-center">You can also search on other users profiles</h5>
+
+                <div class="center-form">
+                    <input type="text" id="gh-username" value="octocat" oninput="fetchGitHubInformation()" />
+                    <div id="gh-user-data"></div>
+                    <div id="gh-repo-data"></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid">
+
+        <div id="footer-details" class="row">
+            <div class="col-sm-4">
+                <h5 class="uppercase general-sub">About</h5>
+                <p class="inline-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="col-sm-4">
+                <h5 class="uppercase general-sub">Download</h5>
+                <p class="inline-block">Need a Printable version on my CV? Download it here.
+                    <a href="assets/CV/sample-cv.pdf" target="blank" class="cv-pdf">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        <span class="sr-only">Download Link</span>
+                    </a>
+                </p>    
+            </div>
+
+            <div class="col-sm-4">
+                <h5 class="uppercase general-sub">Social</h5>
+                <ul class="list-inline social-links">
+
+                    <li class="list-inline-item social-links">
+                        <a href="" target="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+
+                    <li class='list-inline-item social-links'>
+                        <a href="" target="_blank">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item social-links">
+                        <a href="" target="_blank">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            <span class="sr-only">Linkedin</span>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item social-links">
+                        <a href="" target="_blank">
+                            <i class="fa fa-pinterest" aria-hidden="true"></i>
+                            <span class="sr-only">Pinterest</span>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item social-links">
+                        <a href="" target="_blank">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item social-links">
+                        <a href="" target="_blank">
+                            <i class="fa fa-youtube" aria-hidden="true"></i>
+                            <span class="sr-only">Youtube</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>
