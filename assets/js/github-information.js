@@ -59,17 +59,18 @@ function fetchGitHubInformation(event) {
             var repoData = secondResponse[0];
             $('#gh-user-data').html(userInformationHTML(userData));
             $('#gh-repo-data').html(repoInformationHTML(repoData));
-
-        }
-    ), function(errorResponse){
-        if (errorResponse.status == 404) {
-            $('#gh-user-data').html(`<h2>No data found for user: ${username}</h2>`)
-        } else {
-            console.log(console.errorResponse);
-            $('#gh-user-data').html(
-                `<h2>Error: ${errorResponse.responseJSON.message}<h2>`);
-        }
+        }, function(errorResponse) {
+            if (errorResponse.status === 404) {
+                $('#gh-user-data').html(`<h2>No data found for user: ${username}</h2>`)
+            } else if( errorResponse.status === 403) {                                              // APIs have limited, when they are exceeded, a 403 forbidden error 
+                var resetTime = new Date(errorResponse.getResponseHeader('X-RateLimit-Reset')*1000);      // Variable resetTime is a Date object stored inside errorResponse
+                $('#gh-user-data').html(`<h4>Too Many Requests, please wait until ${resetTime.toLocaleTimeString()}</h4>`);
+            } else {
+                console.log(console.errorResponse);
+                $('#gh-user-data').html(
+                    `<h2>Error: ${errorResponse.responseJSON.message}<h2>`);
+            }
+        });
     }
-}
 
 $(document).ready(fetchGitHubInformation);  //When the page loads, the value passed to fetchGitHubInformaiton is automaticaly searched
