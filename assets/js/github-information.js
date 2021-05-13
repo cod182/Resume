@@ -15,7 +15,30 @@ function userInformationHTML(user) {
             `
 }
 
+function repoInformationHTML(repos) {
+    if (repos.length == 0){
+        return `<div class="clearfix repo-list">No Repos</div>`
+    }
+    var listItemsHTML = repos.map(function(repo) {
+        return `<li>
+                    <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+                </li>`;
+    });
+    return `<div class="clearfix repo-list">
+                <p>
+                    <strong>Repo List:</strong>
+                </P>
+            <ul>
+                ${listItemsHTML.join("\n")}
+            </ul>
+            </div>`;s
+}
+
+
 function fetchGitHubInformation(event) {
+    $("#gh-user-data").html("");    // When no username is entered, the div with id gh-user-date is empty
+    $("#gh-repo-data").html("");    // When no username is entered, the div with id gh-repo-date is empty
+
     var username = $("#gh-username").val();
     if (!username) {
         $("#gh-user-data").html(`<h2>Please Enter a GitHub Username</h2>`);
@@ -28,11 +51,15 @@ function fetchGitHubInformation(event) {
         </div>`);
 
     $.when(
-        $.getJSON(`https://api.github.com/users/${username}`)
+        $.getJSON(`https://api.github.com/users/${username}`),
+        $.getJSON(`https://api.github.com/users/${username}/repos`)
     ).then(
-        function(response) {
-            var userData = response;
+        function(firstResponse, secondResponse) {
+            var userData = firstResponse[0];
+            var repoData = secondResponse[0];
             $('#gh-user-data').html(userInformationHTML(userData));
+            $('#gh-repo-data').html(repoInformationHTML(repoData));
+
         }
     ), function(errorResponse){
         if (errorResponse.status == 404) {
@@ -44,3 +71,5 @@ function fetchGitHubInformation(event) {
         }
     }
 }
+
+$(document).ready(fetchGitHubInformation);  //When the page loads, the value passed to fetchGitHubInformaiton is automaticaly searched
