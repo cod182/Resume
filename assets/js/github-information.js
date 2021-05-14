@@ -31,7 +31,7 @@ function repoInformationHTML(repos) {
             <ul>
                 ${listItemsHTML.join("\n")}
             </ul>
-            </div>`;s
+            </div>`;
 }
 
 
